@@ -1,18 +1,21 @@
 <?php
 
 //Registering Custom post
-function prefix_register_name() {
-    register_post_type( 'slug', 
+function neuron_theme_custom_post() {
+    register_post_type( 'slide', 
          array(
         'labels'              =>  array(
-            'name'               => __( 'Plural Name'),
-            'singular_name'      => __( 'Singular Name' ),
-        );
-        'supports'            => array('title','editor','thumbnail','custom-fields','page-attributes',),
-    );
+            'name'               => __( 'slides'),
+            'singular_name'      => __( 'slide' ),
+        ),
+        'supports'            => array('title','editor','thumbnail','custom-fields','page-attributes'),
+        'public'              => false,
+        'show_ui'             => true,
+        ),
 
      );
 }
 
-add_action( 'init', 'prefix_register_name' );
+add_action( 'init', 'neuron_theme_custom_post' );
+
 ?>
