@@ -32,7 +32,7 @@ foreach($myposts as $post): setup_postdata($post);?>
 
 
 
-//custom Post From me
+//custom Post From Rasel
 <?php
 $loop = new WP_Query( array( 'post_type'=> 'slide', 'posts_per_page' => 5, 'orderby' => 'menu_order', 'order' => 'ABS') ); ?>
 <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
