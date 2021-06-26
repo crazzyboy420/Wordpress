@@ -9,8 +9,7 @@ function neuron_theme_custom_post() {
             'singular_name'      => __( 'slide' ),
         ),
         'supports'            => array('title','editor','thumbnail','custom-fields','page-attributes'),
-        'public'              => false,
-        'show_ui'             => true,
+        'public'              => true,
         ),
 
      );
