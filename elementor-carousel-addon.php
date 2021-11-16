@@ -125,3 +125,24 @@ $this->end_controls_section();
     }else{
         $autoplay = 'false';
     }
+echo '
+<script type="text/javascript">
+   jQuery(document).ready(function($){
+       $("#slides-'.$dynamic_num.'").slick({
+        arrows:'.$nav.',
+        dots: '.$dots.',
+        infinite: '.$loop.',
+        nextArrow:"<button class=\'arrow-next\'><i class=\'fas fa-angle-right\'></i></button>",
+        prevArrow:"<button class=\'arrow-prev\'><i class=\'fas fa-angle-left\'></i></button>",
+        fade:'.$fade.',
+        autoplay: '.$autoplay.',';
+        if($autoplay == 'true'){
+            echo'
+            autoplaySpeed: '.$settings['autoplayspeed'].',
+            ';
+        }
+        echo '
+       });
+   });
+</script>
+';
